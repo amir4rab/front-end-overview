@@ -1,6 +1,6 @@
 {
   "license": "Text is available under the Creative Commons Attribution-ShareAlike License 4.0; Data has been fetched from Wikipedia, Wikipedia® is a registered trademark of the Wikimedia Foundation, Inc., a non-profit organization.",
-  "credit": "Wikimedia®",
+  "credit": "Wikipedia®",
   "cities": [
     { "province": "Alborz", "name": "Karaj", "population": 1592492 },
     { "province": "Alborz", "name": "Fardis", "population": 181174 },
