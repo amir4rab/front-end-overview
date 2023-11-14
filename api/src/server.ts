@@ -3,7 +3,7 @@ import data from "./cities.json";
 const strigifiedData = JSON.stringify(data);
 
 const server = Bun.serve({
-  port: 6000,
+  port: 3090,
   fetch() {
     return new Response(strigifiedData, {
       headers: {
