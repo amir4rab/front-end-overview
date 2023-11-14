@@ -38,7 +38,7 @@ export default async function Home() {
   return (
     <main>
       <p className="bg-black text-white font-mono text-center py-2 text-sm">
-        Rendered at {renderTime}
+        Rendered at {renderTime} by Next
       </p>
       <p className="max-w-3xl rounded-3xl mt-6 px-8 py-6 bg-neutral-100 font-mono mx-auto">
         {license}

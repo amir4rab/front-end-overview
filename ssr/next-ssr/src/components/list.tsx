@@ -39,7 +39,7 @@ const List = ({ cities }: Props) => {
           >
             <p className="text-lg font-semibold">{name}</p>
             <p className="text-sm opacity-75 font-mono uppercase">
-              population: {population}
+              population: {population.toLocaleString("en-US")}
             </p>
           </li>
         ))}

@@ -1,4 +1,4 @@
-import { createMemo, createSignal } from "solid-js";
+import { For, createMemo, createSignal } from "solid-js";
 
 // Types
 import { Cities } from "~/type";
@@ -30,14 +30,23 @@ const List = ({ cities }: Props) => {
         />
       </form>
       <ol class="grid gap-2 my-4">
-        {filteredList().map(({ name, population }) => (
-          <li class="grid gap-2 px-6 py-4 rounded-3xl bg-neutral-100">
-            <p class="text-lg font-semibold">{name}</p>
-            <p class="text-sm opacity-75 font-mono uppercase">
-              population: {population.toLocaleString("en-US")}
+        <For
+          each={filteredList()}
+          fallback={
+            <p class="text-sm text-center font-mono my-4">
+              Sorry, Couldn't found any results
             </p>
-          </li>
-        ))}
+          }
+        >
+          {({ name, population }) => (
+            <li class="grid gap-2 px-6 py-4 rounded-3xl bg-neutral-100">
+              <p class="text-lg font-semibold">{name}</p>
+              <p class="text-sm opacity-75 font-mono uppercase">
+                population: {population.toLocaleString("en-US")}
+              </p>
+            </li>
+          )}
+        </For>
       </ol>
     </div>
   );
