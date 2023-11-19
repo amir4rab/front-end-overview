@@ -1,0 +1,41 @@
+---
+interface Props {
+  renderedBy: string;
+  credit: string;
+  license: string;
+}
+const { credit, renderedBy, license } = Astro.props;
+
+const date = new Date();
+const renderTime = `${date.getUTCHours().toString().padStart(2, "0")}:${date
+  .getUTCMinutes()
+  .toString()
+  .padStart(2, "0")}:${date
+  .getUTCSeconds()
+  .toString()
+  .padStart(2, "0")}:${date
+  .getUTCMilliseconds()
+  .toString()
+  .padStart(2, "0")}`;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Astro SSR</title>
+	</head>
+	<body>
+    <p class="bg-black text-white font-mono text-center py-2 text-sm">
+      Rendered at {renderTime} by Astro + {renderedBy}
+    </p>
+    <p class="max-w-3xl rounded-3xl mt-6 px-8 py-6 bg-neutral-100 font-mono mx-auto">
+      {license}
+    </p>
+		<slot />
+    <p class="max-w-3xl rounded-3xl mt-6 px-8 py-6 bg-yellow-200/50 shadow-yellow-200/10 shadow-xl text-xs border border-yellow-200 font-mono mx-auto">
+      All the ciredit for the provided data goes to {credit}
+    </p>
+	</body>
+</html>

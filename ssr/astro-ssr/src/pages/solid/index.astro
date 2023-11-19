@@ -1,0 +1,19 @@
+---
+import Wrapper from "../../components/wrapper.astro";
+import List from "../../solid/list";
+import type { Cities }  from "../../types";
+
+const { cities, credit, license } = (await fetch("http://localhost:3090").then((data) => data.json())) as {
+  cities: Cities;
+  license: string;
+  credit: string;
+};
+---
+
+<Wrapper
+  renderedBy="Solid"
+  credit={credit}
+  license={license}
+>
+  <List client:idle cities={cities} />
+</Wrapper>
