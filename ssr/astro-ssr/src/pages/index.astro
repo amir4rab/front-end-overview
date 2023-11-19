@@ -1,5 +1,5 @@
 ---
-
+export const prerender = true;
 ---
 
 <html lang="en">
@@ -11,6 +11,34 @@
 		<title>Astro SSR</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<main class="max-w-4xl mx-auto my-12">
+			<h1 class="text-4xl mb-6 font-bold">Available Examples</h1>
+			<ul class="underline text-lg grid gap-2 [&_li:hover]:text-blue-600">
+				<li>
+					<a
+						target="_blank"
+						href="./react"
+					>
+						React version
+					</a>
+				</li>
+				<li>
+					<a
+						target="_blank"
+						href="./preact"
+					>
+						Preact version
+					</a>
+				</li>
+				<li>
+					<a
+						target="_blank"
+						href="./solid"
+					>
+						Solid version
+					</a>
+				</li>
+			</ul>
+		</main>
 	</body>
 </html>
