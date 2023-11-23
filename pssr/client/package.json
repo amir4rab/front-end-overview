@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "post-build": "rm -rf ../server/assets && cp -r ./dist/assets ../server/assets",
+    "post-build": "rm -rf ../server/assets && cp -r ./dist/assets ../server/assets && cp -r ./public/* ../server/assets",
     "preview": "vite preview"
   },
   "dependencies": {

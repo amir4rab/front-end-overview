@@ -64,7 +64,7 @@ function App() {
       const csrEnd = performance.now();
       if (csrStart() === null) throw new Error("'csrStart' is undefined");
 
-      console.log(`CSR took ${csrEnd - csrStart()!}ms`);
+      console.log(`CSR took ${(csrEnd - csrStart()!).toFixed(2)}ms`);
     }
   });
 
