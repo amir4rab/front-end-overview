@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/jpg" href="/assets/icon.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golang + Solid Partial SSR</title>
+    {{range .Stylesheets}}
+    <link rel="stylesheet" crossorigin href="{{.}}" />
+    {{end}}
+  </head>
+  <body>
+    <div id="solid-app"></div>
+    {{range .Scripts}}
+    <script defer crossorigin src="{{.}}"></script>
+    {{end}} {{range .InlineScripts}} {{.}} {{end}}
+  </body>
+</html>
