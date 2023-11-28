@@ -2,7 +2,7 @@
 
 This is a simple and crude benchmark, comparing some of the popular front-end libraries.
 
-You can find out how to run the benchmark [`here`](./benchmarking-guide.md) or read the paper about it `here` ( coming soon ).
+You can find out how to run the benchmark [`here`](./benchmarking-guide.md) or read the paper about it [`here`](./paper.md).
 
 In short, here are the benchmark results running on a VDS with a 2core ( and 4 threads ) CPU and 16g of RAM:
 
