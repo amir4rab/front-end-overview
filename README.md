@@ -22,7 +22,7 @@ The benchmarks are the result of stress testing each server with [`autocannon`](
 npx autocannon -c 50 -d 120 -p 10 <applciation-local-address> 
 ```
 
-> [!NOTICE]
+> [!NOTE]
 > In my testing Next JS couldn't handle 50 connections so I had to throttle down the connection count to 10, which means you have to run autocannon with the following command.
 > ```
 > npx autocannon -c 10 -d 120 -p 10 <applciation-local-address>
