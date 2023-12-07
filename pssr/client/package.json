@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "post-build": "rm -rf ../go-server/assets && cp -r ./dist/assets ../go-server/assets && cp -r ./public/* ../go-server/assets",
+    "post-build": "node scripts/post-build.js",
     "preview": "vite preview"
   },
   "dependencies": {
