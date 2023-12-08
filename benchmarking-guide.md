@@ -1,15 +1,17 @@
+![banner](./banner.jpg)
+
 # Benchmarking Guide
 
-> [!CAUTION]
-> The Following Application is designed solely to test the rendering performance of some rendering frameworks. In many cases, the applications are IO-bound and not bounded by rendering performance!  
+> [!CAUTION] The Following Application is designed solely to test the rendering performance of some rendering frameworks. In many cases, the applications are IO-bound and not bounded by rendering performance!
 
 ## Prerequisites
 
 For running the benchmarks you need to have the following Applications / Environments:
-  - A Linux Environment ( preferably using a VDS for the most consistent results )
-  - Node JS version 21
-  - PNPM version 8
-  - Go version 1.21
+
+- A Linux Environment ( preferably using a VDS for the most consistent results )
+- Node JS version 21
+- PNPM version 8
+- Go version 1.21
 
 ## Package Installation and Building
 
@@ -18,23 +20,28 @@ For building each of the applications your commands are as listed below, keep in
 ### [API](./api)
 
 Building the Application
+
 ```bash
 go build ./server.go
 ```
 
 ### [SSR](./ssr/)
+
 For the SSR applications you need to run the following code for each of them
 
 Installing The Packages
+
 ```bash
 pnpm i
 ```
 
 Building The Application
+
 ```bash
 pnpm run build
 ```
-The SSR applications are as follows: 
+
+The SSR applications are as follows:
 
 - [Angular SSR](./ssr/angular-ssr)
 - [Astro SSR](./ssr/astro-ssr)
@@ -46,12 +53,14 @@ The SSR applications are as follows:
 #### Building the client end [Solid Application](./pssr/client/)
 
 Installing The Packages
+
 ```bash
 cd client
 pnpm i
 ```
 
 Building The Application
+
 ```bash
 pnpm run build && pnpm run post-build
 ```
@@ -59,6 +68,7 @@ pnpm run build && pnpm run post-build
 #### Building The [Go Server](./pssr/go-server/)
 
 Building the Application
+
 ```bash
 go build go-server/server.go
 ```
@@ -75,14 +85,13 @@ npx autocannon -c 50 -d 120 -p 10 <applciation-local-address>
 
 Then after 120s, the results will be displayed.
 
-> [!NOTE]
-> In my testing Next JS couldn't handle 50 connections so I had to throttle down the connection count to 10, which means you have to run autocannon with the following command.
+> [!NOTE] In my testing Next JS couldn't handle 50 connections so I had to throttle down the connection count to 10, which means you have to run autocannon with the following command.
+>
 > ```
 > npx autocannon -c 10 -d 120 -p 10 <applciation-local-address>
 > ```
 
-> [!TIP]
-> Since the V8 engine performs better after a certain amount of warmups, try to run the benchmarks at least twice and ignore the first run results.
+> [!TIP] Since the V8 engine performs better after a certain amount of warmups, try to run the benchmarks at least twice and ignore the first run results.
 
 To run each application you need to go to its root directory and run the following commands:
 
