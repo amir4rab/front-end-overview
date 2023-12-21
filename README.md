@@ -12,7 +12,8 @@ In short, here are the benchmark results running on a VDS with a 2core ( and 4 t
 | --------------------------------------------- | ---- | ------ | ----- |
 | [PSSR - Solid + GO](./pssr/go-server/)        | 2127 | 2446   | 2581  |
 | [PSSR - Solid + Node JS](./pssr/node-server/) | N/A  | N/A    | N/A   |
-| [Solid Start](./ssr/solid-ssr/)               | 65   | 177    | 225   |
+| [Solid Start V1](./ssr/solid-ssr/)            | 65   | 177    | 225   |
+| [Solid Start V2](./ssr/solid-ssr-v2/)         | N/A  | N/A    | N/A   |
 | [Angular](./ssr/angular-ssr/)                 | 38   | 132    | 167   |
 | [Astro + Solid](./ssr/astro-ssr/)             | 41   | 106    | 118   |
 | [Astro + React](./ssr/astro-ssr/)             | 52   | 79     | 107   |
