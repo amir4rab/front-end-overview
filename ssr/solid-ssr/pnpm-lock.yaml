@@ -3062,7 +3062,7 @@ packages:
       solid-js: 1.8.5
       solid-start-node: 0.3.10(solid-start@0.3.10)(vite@4.5.2)
       terser: 5.24.0
-      undici: 5.27.2
+      undici: 5.28.3
       vite: 4.5.2
       vite-plugin-inspect: 0.7.42(rollup@3.29.4)(vite@4.5.2)
       vite-plugin-solid: 2.7.2(solid-js@1.8.5)(vite@4.5.2)
@@ -3230,8 +3230,8 @@ packages:
     hasBin: true
     dev: true
 
-  /undici@5.27.2:
-    resolution: {integrity: sha512-iS857PdOEy/y3wlM3yRp+6SNQQ6xU0mmZcwRSriqk+et/cwWAtwmIGf6WkoDN2EK/AMdCO/dfXzIwi+rFMrjjQ==}
+  /undici@5.28.3:
+    resolution: {integrity: sha512-3ItfzbrhDlINjaP0duwnNsKpDQk3acHI3gVJ1z4fmwMK31k5G9OVIAMLSIaP6w4FaGkaAkN6zaQO9LUvZ1t7VA==}
     engines: {node: '>=14.0'}
     dependencies:
       '@fastify/busboy': 2.1.0
